@@ -1,19 +1,30 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+  <div id="app">  
+    <div class="wrapper">
+      <MyHeader></MyHeader>
+      <MyAside></MyAside>
+      <div class="content-wrapper"></div>
+       <router-view/>
+    </div>
+    </div>
   </div>
 </template>
 
 <script>
+import MyHeader from "@/components/MyHeader";
+import MyAside from "@/components/MyAside";
 export default {
-  name: 'App'
-}
+  name: "app",
+  components: {
+    MyHeader,
+    MyAside
+  }
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
